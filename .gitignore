@@ -1,0 +1,26 @@
+# Environment & sensitive credentials (DO NOT COMMIT)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS metadata
+.DS_Store
+Thumbs.db
+
+# Runtime data cache and screenshots
+data/cache/
+screenshots/
+reports/
+*.png
+*.jpg

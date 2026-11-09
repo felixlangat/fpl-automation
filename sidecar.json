@@ -1,0 +1,21 @@
+{
+  "builtin": "schedule",
+  "args": [
+    "CRON_TZ=Africa/Nairobi 0 9 * * 2",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Run the weekly Fantasy Premier League automation pipeline by executing:\npython3 /Users/felix-pc/.gemini/antigravity/scratch/fpl_automation/main.py --output-artifact <appDataDir>/brain/<conversation-id>/fpl_weekly_summary.md\n\nReview the generated gameweek summary report, check for any team health alerts or transfer suggestions, and ensure the lineup changes have been saved."
+  ],
+  "restart_policy": "always",
+  "display_name": "Weekly FPL Lineup & Transfer Automation",
+  "description": "Every Tuesday at 9:00 AM (Africa/Nairobi), runs the FPL optimization pipeline, executes squad adjustments and transfers via Playwright, and produces a summary artifact.",
+  "agent_permissions": {
+    "workspace_uris": [
+      "file:///Users/felix-pc/.gemini/antigravity/scratch/fpl_automation"
+    ],
+    "access_grants": [
+      "command(python3 /Users/felix-pc/.gemini/antigravity/scratch/fpl_automation/main.py)"
+    ]
+  }
+}
